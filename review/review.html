@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href="review.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="../index.html"><img src="img/logo2.svg" alt="" height="32px"></a> 
+            </div>
+
+            <ul class="navbar-menu">
+                <li class="navbar-item current"><a href="../intro/intro.html">소개</a></li>
+                <li class="navbar-item"><a href="../program/program.html">프로그램</a></li>
+                <li class="navbar-item"><a href="review.html">후기</a></li>
+                <li class="navbar-item"><a href="#">고객서비스</a></li>
+            </ul>
+
+            <div class="utility">
+                <button><img src="img/search.svg" alt=""></button>
+                <button><img src="img/user.svg" alt=""></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="click-area section" id="click-area">
+        <div class="click-sticker">
+            <img src="img/click sticker.png" alt="">
+        </div>
+        <div class="review-container">
+            <div class="text"><img src="img/R.svg" alt=""></div>
+            <div class="text"><img src="img/E.svg" alt=""></div>
+            <div class="text"><img src="img/V.svg" alt=""></div>
+            <div class="text"><img src="img/I.svg" alt=""></div>
+            <div class="text"><img src="img/E-1.svg" alt=""></div>
+            <div class="text"><img src="img/W.svg" alt=""></div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal01">
+                <div class="drop-down-container">
+                    <select name="" id="">
+                            <option value="">공연</option>
+                            <option value="">전시</option>
+                            <option value="">원데이 클래스</option>
+                    </select>
+                    <p>후기 쓰기</p>
+                </div>
+                <span class="close"><img src="img/x-close.svg" alt=""></span>
+            </div>
+            <div class="modal02">
+                <input type="text" placeholder="제목을 입력해주세요." class="title">
+                <textarea name="contents" id="" placeholder="내용을 입력해주세요."></textarea>
+            </div>
+            <div class="modal03">
+                <input type="text" placeholder="닉네임을 입력해주세요.">
+                <button>작성하기</button>
+            </div>
+            
+        </div>
+    </div>
+<!---------------------- sectionA ---------------------->
+    <section class="secA section" id="secA">
+        <div class="filter-container">
+            <select id="categoryFilter">
+                <option value="all">모든</option>
+                <option value="공연">공연</option>
+                <option value="전시">전시</option>
+                <option value="원데이 클래스">원데이 클래스</option>
+            </select>
+            <p>후기 보기</p>
+        </div>
+
+        <div class="disable-icon">
+            <img src="img/disable-icon.png" alt="">
+            <p>아직 작성된 리뷰가 없어요</p>
+        </div>
+
+        <div id="memoContainer" class="addmemo">
+            <!-- <div class="grid-row"></div>
+            <div class="grid-row"></div> -->
+            <!-- <div class="grid-row"></div> -->
+        </div>
+
+        <div class="pagination">
+            <button><img src="img/prev.svg" alt=""></button>
+            <div class="page-number">
+                <button class="page" id="current-number">1</button>
+                <button class="page">2</button>
+                <button class="page">3</button>
+                <button class="page">4</button>
+                <button class="page">5</button>
+            </div>
+            <button><img src="img/next.svg" alt=""></button>
+        </div>
+    </section>
+
+    
+    <footer class="real-footer">
+  <div class="ftbox">
+    <img class="fticon" src="img/logo2.svg">
+
+
+    <div class="ftcontent">
+      <ul>
+          <li>소개</li>
+          <li>프로그램</li>
+          <li>예약</li>
+          <li>고객서비스</li>
+      </ul>
+    </div>
+
+       <div class="ftlast">
+          <ul>
+           <li>PRIVACY POLICY</li>
+           <li>© WORGOT ART DOCK️</li>
+          </ul>
+      </div>
+
+  </div>
+  </footer>
+    
+    <script src="review.js"></script>
+</body>
+</html>

@@ -1,0 +1,584 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    text-decoration: none;
+    color:#111111;
+
+    font-family: "Noto Sans KR", sans-serif;
+}
+/*-------------------------- 네비게이션바 --------------------------*/
+header{
+    /* background: rgba(255,255,255,1); */
+     background: rgba(255,255,255,0);
+     pointer-events: none;
+
+    width: 100vw;
+    height: 60px;
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+.navbar{
+    /* max-width: 1280px; */
+    max-width: 90%;
+
+    display: flex;
+    flex: 1 1 0;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+
+}
+.logo{
+    flex: 1 0 0;
+    display: flex;
+    align-items: center;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+}
+.navbar > ul{
+    flex: 1 0 0;
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    gap: 32px; /* 각 항목 사이의 간격 유지 */
+}
+
+.navbar a{
+    color: #303030;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+    }
+.navbar-menu{
+    opacity:0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+
+
+}
+.utility{
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    justify-content: end;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+.utility button{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+
+
+
+}
+
+
+/* 푸터 */
+footer{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    align-content: center;
+}
+
+.ftbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 221px;
+    flex-shrink: 0;
+}
+
+.fticon{
+    width: 100px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+
+.ftcontent{
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.ftcontent ul{
+    display:flex;
+    justify-content: center; /* 중앙 정렬 */
+
+}
+
+.ftcontent ul li{
+    margin-left:32px;
+    color: #000;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 120% */
+    letter-spacing: -0.4px;
+}
+.ftcontent ul li:first-child{
+    margin-left:0px;
+}
+
+
+
+.ftlast{
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.ftlast ul{
+    display: flex;
+}
+.ftlast ul li{
+    margin-left:40px;
+    color: #000;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+.ftlast ul li:first-child{
+    margin-left:0px;
+}
+
+
+/*  */
+
+.all{
+    font-family:'Courier New', Courier, monospace;
+
+    /* height:auto; */
+}
+.bg-inner { width: 100%; height:100vh;  overflow: hidden;     position: relative;
+}
+.wrap { transform: scale(1.6); }
+.temp-bg-back { transition: .6s ease-out; }
+.backBg { width: 100%; }
+.headline { width: 50%; position: fixed;  top:50%; left:50%; transform: translate(-50%, -100%);}
+
+.movingImg {
+    width: 5%;
+    position: absolute;
+    transform-origin: center center; /* 변환의 기준점을 중심으로 설정 */
+    transition: transform 0.3s ease;
+}
+
+
+.mouse-follower {
+    transform-origin: center center; /* 중앙을 기준으로 변형 */
+    position: absolute;
+    border-radius: 100%;
+    display: block;
+    opacity: 100; /* 초기에는 보이지 않게 설정 */
+    transition: 0.3s ease-out;
+    backdrop-filter: blur(5px); /* 배경 흐림 효과 추가 */
+    width:50px;
+    height:50px;
+    box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.3);
+    background-image: url("img/mouse.svg");
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    will-change: transform;
+    /* transition: "0.7s all ease-in"; */
+    display:flex;
+    align-content: center;
+    left: 50%;
+    top:50%;
+}
+
+.text-container{
+    font-size:18px;
+    font-weight: 700;
+    padding:0;
+}
+
+.mouse-follower .icon {
+    position: absolute;
+    bottom: 10px; /* Adjust these values as needed */
+    right: 10px;
+    width: 40px;
+}
+
+/* section-1------------------------------------------------------------ */
+.section-1{
+    background-color: #F7F7F7;
+    width:100%;
+    height: calc(100vh + 2000px);
+}
+
+.column{
+    position:sticky;
+    top:0;
+    left:0;
+    height:100vh;
+}
+.movement{
+    position:fixed;
+    right:-5%;
+    top:-5%;
+    transform: translate(70%, -50%);
+    transition: all 0.5s ease-out ;
+    display : none;
+    white-space: nowrap; 
+
+    /* 이거 줄바꿈 방지 */
+}
+.subtitle{
+ font-size: 1rem;
+}
+
+.emoji{
+    color:#8092F3;
+}
+
+
+
+/* section-1------------------------------------------------------------ */
+
+/* section-2------------------------------------------------------------- */
+.section-2 {
+    background-color: #F7F7F7;
+    width: 100%;
+    position: relative;
+
+    height: 100vh;
+}
+.circle-video {
+    width: 550px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    transition: transform 0.1s ease, opacity 0.5s ease; 
+    transform: scale(0);
+    opacity: 0; 
+}
+
+.back-video {
+    width: 100%; /* 비디오가 circle-video 컨테이너 크기에 맞춰지도록 함 */
+    height: 100%;
+    object-fit: cover; /* 컨테이너 크기에 맞추어 비디오 확대/축소 */
+}
+
+
+
+.grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-areas: "margin-left a b margin-right";
+    align-content: center;
+}
+
+.subtitle-2 {
+    grid-area: a;
+
+}
+.subtitle-2 h2{
+    font-size: 1.5rem;
+    margin-left: 50px;
+    font-weight: 700;
+}
+.contents {
+    grid-area: b;
+}
+
+.item{
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-size:26px;
+    font-weight: 600;
+    margin-bottom:80px;
+}
+
+.margin {
+    grid-area: margin-left;
+    background-color: rgba(153, 153, 153, 0);
+}
+
+.margin-right {
+    grid-area: margin-right;
+    background-color: rgba(153, 153, 153, 0);
+
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* section-2끝------------------------------------------------------------- */
+/* section-3 시작 -------------------------------------------------------*/
+
+.backtext{
+    color: black;
+    font-size: 60px;
+    font-weight: 600;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transition: all 2s ease-out;
+}
+
+.section-3{
+    background-color: #F7F7F7;
+    width:100%;
+    height: calc(100vh + 6000px);
+
+}
+
+.columnY{
+    position:sticky;
+    display:flex;
+    justify-self: center;
+    top:0;
+    left:0;
+    height:100vh;
+    background-color: #F7F7F7;
+    transition: all 1s ease;
+
+}
+.movementY {
+    width: calc(100vw + 6000px);
+    height: 100vh;
+    position: absolute;
+    left: 0%;
+    transform: translateX(3000px) ;
+    transition: all 0.5s ease-out;
+    display: none;
+    pointer-events: none;
+
+}
+.pack{
+    height:100%;
+    width:100%;
+}
+
+@keyframes vertical-move {
+    0%, 100% {
+        transform: translateY(100px)  rotate(2deg);
+    } 
+    50% {
+        transform: translateY(250px) rotate(-2deg); /* 중간 위치, 카드가 30px 위로 이동 */
+    }
+}
+
+.card {
+    position: absolute;
+    width: 25rem;
+    height: 40rem;
+    border-radius: 2rem;
+    background-size: cover;
+    animation: vertical-move 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+    overflow: hidden;  
+    pointer-events: all; 
+    filter: blur(6px) grayscale(80%);;
+
+
+}
+
+
+.card-text {
+    display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    pointer-events: none; 
+
+}
+
+.movementY .pack x.card {
+    background-color: transparent;
+}
+
+.movementY .pack .card:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    filter: none;
+}
+
+.movementY .pack .card:hover .card-text {
+    display: block; 
+    filter: none; 
+}
+
+.movementY .pack .card:nth-child(1) {
+    left: 1000px; /* 첫 번째 카드의 위치 */
+    background-image: url('img/11.png');
+    background-size: cover;
+    animation-delay: 0s; /* 첫 번째 카드, 딜레이 없음 */
+
+}
+
+.movementY .pack .card:nth-child(2) {
+    left: 1500px; /* 두 번째 카드는 첫 번째 카드보다 200px 오른쪽에 위치 */
+    background-image: url('img/22.png');
+    background-size: cover;
+    animation-delay: 0.2s; /* 두 번째 카드, 0.2초 딜레이 */
+
+}
+
+.movementY .pack .card:nth-child(3) {
+    left: 2000px; /* 세 번째 카드는 두 번째 카드보다 200px 더 오른쪽에 위치 */
+    background-image: url('img/33.png');
+    background-size: cover;
+    animation-delay: 0.4s; /* 두 번째 카드, 0.2초 딜레이 */
+
+}
+
+.movementY .pack .card:nth-child(4) {
+    left: 2500px; /* 네 번째 카드 위치 */
+    background-image: url('img/44.png');
+    background-size: cover;
+    animation-delay: 0.6s; /* 두 번째 카드, 0.2초 딜레이 */
+
+}
+
+.movementY .pack .card:nth-child(5) {
+    left: 3000px; /* 다섯 번째 카드 위치 */
+    background-image: url('img/55.png');
+    background-size: cover;
+    animation-delay: 0.8s; /* 두 번째 카드, 0.2초 딜레이 */
+
+}
+
+.movementY .pack .card:nth-child(6) {
+    left: 3500px; /* 여섯 번째 카드 위치 */
+    background-image: url('img/66.png');
+    background-size: cover;
+    animation-delay: 1s; /* 두 번째 카드, 0.2초 딜레이 */
+
+}
+.movementY .pack .card:nth-child(7) {
+    left: 4000px; /* 여섯 번째 카드 위치 */
+    background-image: url('img/77.png');
+    background-size: cover;
+    animation-delay: 1.2s; /* 두 번째 카드, 0.2초 딜레이 */
+
+}
+.movementY .pack .card:nth-child(8) {
+    left: 4500px; /* 여섯 번째 카드 위치 */
+    background-image: url('img/88.png');
+    background-size: cover;
+    animation-delay: 1.4s; /* 두 번째 카드, 0.2초 딜레이 */
+
+}
+
+
+/* section-3 끝 ---------------------------------------------------------------------- */
+/* section-4 시작 ---------------------------------------------------------------------- */
+.section-4{
+    background-color: #F7F7F7;
+    width:100%;
+    height: 100vh;
+}
+.box{
+    margin-bottom: 30px;
+    grid-area: b;
+    width:100%;
+    height:180px;
+    display:flex;
+    border-bottom: 1px dotted #000;
+    border-spacing: 30px;
+}
+
+h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+.section-5{
+    background-color: blue;
+    width:100%;
+    height: 100vh;
+}   
+.ti{
+    width:32%;
+    height:180px;
+}
+.tiimg{                  
+
+    width:25%;
+    height:180px;
+
+}
+.titag{
+    width:150px;
+    height:150px;
+    background-color: grey;
+    border-radius: 10px;
+}
+.ticontent{
+    line-height: 23px;
+    margin-left:30px;
+    width:40%;  
+    height:180px;
+}
+
+.viewbutton{
+    color:#F7F7F7;    
+    border-radius: 100px;
+    background-color: #000;
+    width:100px;
+    height:40px;
+    margin-left:50px;
+    margin-top:10px;
+    border: none;
+}
+.party{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.viewer{
+    width:400px;
+    height:400px;
+    margin-left:50px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    background-size: cover;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+.mou{
+    width:50px;
+    height:50px;
+    border-radius: 100px;
+    background-color:  red;
+}
+/* section-4 끝 ---------------------------------------------------------------------- */

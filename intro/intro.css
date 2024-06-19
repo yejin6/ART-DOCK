@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: #F7F7F7; 
+}
+
+header {
+    background: #fff;
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    max-width: 1280px;
+    display: flex;
+    flex: 1 1 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.navbar > ul {
+    display: flex;
+    gap: 32px;
+}
+
+.navbar a {
+    color: #303030;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.36px;
+}
+
+.utility {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    justify-content: end;
+}
+
+.utility button {
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+#title {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.anim-typewriter {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    visibility: hidden; 
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 1280px;
+}
+
+.container > div {
+    flex: 1;
+}
+
+.div1 {
+    display: flex;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    font-size: 20px;
+}
+
+.div1 p {
+    flex: 1;
+    margin: 0;
+}
+
+.div1:not(:last-child) {
+    border-bottom: #303030 dashed 1px;
+}
+
+.div2 {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 60px;
+    border-radius: 20px;
+    font-size: 40px;
+}
+
+.div2 > span{
+    font-size: 28px;
+}
+
+.p3 > span {
+    font-size: 60px;
+    font-family: poppins;
+    font-weight: 700;
+}
+
+.p3 {
+    font-size: 24px;
+}
+
+.hover-image {
+    position: absolute;
+    top: 50%;
+    left: -420px; 
+    transform: translateY(-50%);
+    display: none;
+    width: 320px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.shape-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    width: 368px;
+    height: 255px;
+    background-image: url('https://i.postimg.cc/fbNQ0cF8/flame-1032.png');
+    background-size: cover;
+    opacity: 0.75;
+    will-change: transform;
+}
+
+/* 푸터 */
+footer{
+position: relative;
+width: 100%;
+height: 150px;
+align-items: center;
+align-content: center;
+}
+
+.ftbox{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 221px;
+flex-shrink: 0;
+}
+
+.fticon{
+width: 100px;
+height: 30px;
+flex-shrink: 0;
+}
+
+
+.ftcontent{
+align-items: flex-start;
+gap: 32px;
+}
+
+.ftcontent ul{
+display:flex;
+justify-content: center; /* 중앙 정렬 */
+
+}
+
+.ftcontent ul li{
+margin-left:32px;
+color: #000;
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 120% */
+letter-spacing: -0.4px;
+}
+.ftcontent ul li:first-child{
+margin-left:0px;
+}
+
+
+
+.ftlast{
+align-items: flex-start;
+gap: 40px;
+}
+
+.ftlast ul{
+display: flex;
+}
+.ftlast ul li{
+margin-left:40px;
+color: #000;
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+.ftlast ul li:first-child{
+margin-left:0px;
+}
